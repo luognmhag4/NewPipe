@@ -22,46 +22,58 @@ abstract class CheckDependenciesOrder : DefaultTask() {
     @TaskAction
     fun run() {
         val file = tomlFile.get().asFile
-        if (!file.exists()) error("TOML file not found")
+        require(file.exists()) { "TOML file not found: ${file.path}" }
 
         val lines = file.readLines()
-        val nonSortedBlocks = mutableListOf<List<String>>()
-        var currentBlock = mutableListOf<String>()
-        var prevLine = ""
-        var prevIndex = 0
+        val unsortedBlocks = mutableListOf<List<String>>()
+        val currentBlock = mutableListOf<String>()
+        var previousLine: String? = null
+        var previousLineNumber = 0
 
-        lines.forEachIndexed { lineIndex, line ->
-            if (line.trim().isNotEmpty() && !line.startsWith("#")) {
-                if (line.startsWith("[")) {
-                    prevLine = ""
-                } else {
-                    val currIndex = lineIndex + 1
-                    if (prevLine > line) {
-                        if (currentBlock.isNotEmpty() && currentBlock.last() == "$prevIndex: $prevLine") {
-                            currentBlock.add("$currIndex: $line")
-                        } else {
-                            if (currentBlock.isNotEmpty()) {
-                                nonSortedBlocks.add(currentBlock)
-                                currentBlock = mutableListOf()
-                            }
-                            currentBlock.add("$prevIndex: $prevLine")
-                            currentBlock.add("$currIndex: $line")
-                        }
-                    }
-                    prevLine = line
-                    prevIndex = lineIndex + 1
-                }
+        fun flushCurrentBlock() {
+            if (currentBlock.isNotEmpty()) {
+                unsortedBlocks += currentBlock.toList()
+                currentBlock.clear()
             }
         }
 
-        if (currentBlock.isNotEmpty()) {
-            nonSortedBlocks.add(currentBlock)
+        fun addViolation(previous: Pair<Int, String>, current: Pair<Int, String>) {
+            if (currentBlock.lastOrNull() == "${previous.first}: ${previous.second}") {
+                currentBlock += "${current.first}: ${current.second}"
+            } else {
+                flushCurrentBlock()
+                currentBlock += "${previous.first}: ${previous.second}"
+                currentBlock += "${current.first}: ${current.second}"
+            }
         }
 
-        if (nonSortedBlocks.isNotEmpty()) {
+        lines.forEachIndexed { index, line ->
+            val trimmedLine = line.trim()
+            if (trimmedLine.isEmpty() || trimmedLine.startsWith("#")) return@forEachIndexed
+            if (trimmedLine.startsWith("[")) {
+                previousLine = null
+                previousLineNumber = 0
+                flushCurrentBlock()
+                return@forEachIndexed
+            }
+
+            val currentLineNumber = index + 1
+            previousLine?.let { previous ->
+                if (previous > line) {
+                    addViolation(previousLineNumber to previous, currentLineNumber to line)
+                }
+            }
+
+            previousLine = line
+            previousLineNumber = currentLineNumber
+        }
+
+        flushCurrentBlock()
+
+        if (unsortedBlocks.isNotEmpty()) {
             error(
                 "The following lines were not sorted:\n" +
-                        nonSortedBlocks.joinToString("\n\n") { it.joinToString("\n") }
+                        unsortedBlocks.joinToString("\n\n") { it.joinToString("\n") }
             )
         }
     }

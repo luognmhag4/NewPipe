@@ -3,7 +3,7 @@
 
 <p align="center"><a href="https://newpipe.net"><img src="assets/new_pipe_icon_5.png" width="150"></a></p>
 <h2 align="center"><b>NewPipe</b></h2>
-<p align="center">A libre, lightweight streaming front-end for Android.</p>
+<p align="center">A libre, lightweight streaming frontend for Android.</p>
 
 <p align="center"><a href="https://f-droid.org/packages/org.schabi.newpipe/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on-en.svg" alt="Get it on F-Droid" width="206"/></a></p>
 

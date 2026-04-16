@@ -12,6 +12,13 @@ import org.junit.Test
 import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity
 import org.schabi.newpipe.local.bookmark.MergedPlaylistManager
 
+/**
+ * Pruebas unitarias para la fusión de listas de reproducción locales y remotas.
+ *
+ * Esta clase valida el comportamiento de [MergedPlaylistManager.merge], comprobando
+ * que las listas se combinan correctamente respetando sus índices de ordenación y
+ * los nombres de ordenación cuando existen colisiones.
+ */
 class PlaylistLocalItemTest {
 
     @Test

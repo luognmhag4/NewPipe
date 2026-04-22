@@ -1,9 +1,9 @@
-﻿<h3 align="center">We are <i>rewriting</i> large chunks of the codebase, to bring about <a href="https://newpipe.net/blog/pinned/announcement/newpipe-0.27.6-rewrite-team-states/#the-refactor">a modern and stable NewPipe</a>! You can download nightly builds <a href="https://github.com/TeamNewPipe/NewPipe-refactor-nightly/releases">here</a>.</h3>
-<h4 align="center">Please work on the <code>refactor</code> branch if you want to contribute <i>new features</i>. The current codebase is in maintenance mode and will only receive <i>bugfixes</i>.</h4>
+﻿<h3 align="center">Estamos <i>reescribiendo</i> gran parte del código para ofrecer una <a href="https://newpipe.net/blog/pinned/announcement/newpipe-0.27.6-rewrite-team-states/#the-refactor">versión moderna y estable de NewPipe</a>. ¡Descarga las compilaciones nightly <a href="https://github.com/TeamNewPipe/NewPipe-refactor-nightly/releases">aquí</a>!</h3>
+<h4 align="center">Trabaja en la rama <code>refactor</code> si quieres contribuir con <i>nuevas funcionalidades</i>. La rama estable está en modo mantenimiento y solo recibirá correcciones de errores.</h4>
 
 <p align="center"><a href="https://newpipe.net"><img src="assets/new_pipe_icon_5.png" width="150"></a></p>
 <h2 align="center"><b>NewPipe</b></h2>
-<p align="center">A libre, lightweight streaming frontend for Android.</p>
+<p align="center">Un frontend libre y ligero para Android, diseñado para ofrecer streaming sin dependencia de servicios propietarios.</p>
 
 <p align="center"><a href="https://f-droid.org/packages/org.schabi.newpipe/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on-en.svg" alt="Get it on F-Droid" width="206"/></a></p>
 
@@ -23,21 +23,21 @@
 
 <hr>
 
-## Overview
+## Descripción general
 
-NewPipe is a free and open source Android app that provides a privacy-friendly front-end to popular streaming services. It works without requiring a user account, and it avoids proprietary dependencies such as Google Play Services.
+NewPipe es una aplicación Android libre y de código abierto que ofrece una interfaz de streaming centrada en la privacidad. Funciona sin necesidad de una cuenta de usuario y evita dependencias propietarias como Google Play Services.
 
-This branch is focused on the refactor effort, so please use the <code>refactor</code> branch when contributing new functionality. The stable codebase is in maintenance mode and receives only bug fixes.
+Esta rama está enfocada en la reestructuración del código. Para nuevas funcionalidades usa la rama <code>refactor</code>. La rama estable está en mantenimiento y recibe únicamente correcciones de errores.
 
-## Quick links
+## Enlaces rápidos
 
-- [Website](https://newpipe.net)
+- [Sitio web](https://newpipe.net)
 - [Blog](https://newpipe.net/blog/)
-- [FAQ](https://newpipe.net/FAQ/)
-- [Documentation](https://teamnewpipe.github.io/documentation/)
-- [Contribution guide](.github/CONTRIBUTING.md)
+- [Preguntas frecuentes](https://newpipe.net/FAQ/)
+- [Documentación](https://teamnewpipe.github.io/documentation/)
+- [Guía de contribución](.github/CONTRIBUTING.md)
 
-## Screenshots
+## Capturas
 
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/00.png" width="160" />](fastlane/metadata/android/en-US/images/phoneScreenshots/00.png)
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/01.png" width="160" />](fastlane/metadata/android/en-US/images/phoneScreenshots/01.png)
@@ -52,76 +52,76 @@ This branch is focused on the refactor effort, so please use the <code>refactor<
 [<img src="fastlane/metadata/android/en-US/images/tenInchScreenshots/09.png" width="405" />](fastlane/metadata/android/en-US/images/tenInchScreenshots/09.png)
 [<img src="fastlane/metadata/android/en-US/images/tenInchScreenshots/10.png" width="405" />](fastlane/metadata/android/en-US/images/tenInchScreenshots/10.png)
 
-## Supported services
+## Servicios compatibles
 
-NewPipe currently supports these platforms:
+NewPipe soporta actualmente las siguientes plataformas:
 
-- YouTube and YouTube Music
-- PeerTube and all its instances
+- YouTube y YouTube Music
+- PeerTube y todas sus instancias
 - Bandcamp
 - SoundCloud
 - media.ccc.de
 
-If you want to add a new service, please get in touch before starting work. Our [documentation](https://teamnewpipe.github.io/documentation/) explains how to extend the app and the [NewPipe Extractor](https://github.com/TeamNewPipe/NewPipeExtractor).
+Si quieres añadir un nuevo servicio, contáctanos antes de comenzar. Nuestra [documentación](https://teamnewpipe.github.io/documentation/) explica cómo ampliar la aplicación y el [NewPipe Extractor](https://github.com/TeamNewPipe/NewPipeExtractor).
 
-## Features
+## Funcionalidades
 
-- Watch videos in resolutions up to 4K
-- Play audio in the background using only the audio stream
-- Popup mode / Picture-in-Picture on supported devices
-- Watch live streams
-- Toggle subtitles and closed captions
-- Search videos, audio, channels, playlists, and albums
-- Browse content inside channels
-- Subscribe to channels without logging in
-- Receive notifications for new uploads from subscribed channels
-- Organize channels into groups for easier browsing
-- View and search watch history
-- Create and manage local playlists
-- Download videos, audio, and subtitles
-- Open content directly in Kodi
-- Watch or block age-restricted material
+- Ver vídeos en resoluciones de hasta 4K
+- Reproducir solo audio en segundo plano
+- Modo ventana flotante / Picture-in-Picture en dispositivos compatibles
+- Ver retransmisiones en directo
+- Activar subtítulos y closed captions
+- Buscar vídeos, audio, canales, listas de reproducción y álbumes
+- Navegar el contenido dentro de canales
+- Suscribirse a canales sin iniciar sesión
+- Recibir notificaciones de nuevos vídeos de canales suscritos
+- Organizar canales en grupos para facilitar la navegación
+- Ver y buscar el historial de reproducción
+- Crear y gestionar listas de reproducción locales
+- Descargar vídeos, audio y subtítulos
+- Abrir contenido directamente en Kodi
+- Ver o bloquear contenido con restricción de edad
 
-## Installation and updates
+## Instalación y actualizaciones
 
-Recommended installation methods:
+Métodos recomendados para instalar NewPipe:
 
-1. Add the NewPipe repo to F-Droid and install from there.
-2. Download the APK from [GitHub Releases](https://github.com/TeamNewPipe/NewPipe/releases) and verify the signing key.
-3. Install from F-Droid updates (slower because F-Droid rebuilds and signs packages).
-4. Build a debug APK locally (fastest for development, but more complex).
-5. Use a PR-specific APK when testing a feature or bugfix from this repository.
+1. Añade el repositorio de NewPipe a F-Droid e instala desde allí.
+2. Descarga el APK desde [GitHub Releases](https://github.com/TeamNewPipe/NewPipe/releases) y verifica la firma.
+3. Instala desde actualizaciones de F-Droid (más lento, porque F-Droid recompila y firma los paquetes).
+4. Compila un APK de depuración localmente (más rápido para desarrollo, pero más complejo).
+5. Usa un APK específico de un PR al probar una función o corrección de errores de este repositorio.
 
-Methods 1 and 2 use the same signing key and are compatible with each other. F-Droid package updates are signed by F-Droid and are not compatible with APKs installed from methods 1 or 2. Debug APKs are signed with a separate key and cannot be updated by release-signed builds.
+Los métodos 1 y 2 usan la misma clave de firma y son compatibles entre sí. Las actualizaciones desde F-Droid no son compatibles con APKs instalados por los métodos 1 o 2. Los APK de depuración están firmados con una clave diferente y no se pueden actualizar con builds firmados de producción.
 
-Switching sources safely:
+### Cambio seguro de fuente
 
-1. Back up your data in Settings > Backup and Restore > Export Database.
-2. Uninstall NewPipe.
-3. Install the APK from the new source.
-4. Restore your data using Settings > Backup and Restore > Import Database.
+1. Haz copia de seguridad de tus datos en Ajustes > Copia de seguridad y restauración > Exportar base de datos.
+2. Desinstala NewPipe.
+3. Instala el APK desde la nueva fuente.
+4. Restaura tus datos en Ajustes > Copia de seguridad y restauración > Importar base de datos.
 
-> **Note:** Only restore databases exported from the same app build type. Importing data from a different APK may corrupt your installation.
+> **Nota:** Solo restaura bases de datos exportadas desde el mismo tipo de build de la aplicación. Importar datos desde un APK diferente puede corromper tu instalación.
 
-### APK signing key
+### Clave de firma del APK
 
-Use this fingerprint to verify official NewPipe APKs signed by the project:
+Usa esta huella para verificar los APK oficiales de NewPipe firmados por el proyecto:
 
 ```
 CB:84:06:9B:D6:81:16:BA:FA:E5:EE:4E:E5:B0:8A:56:7A:A6:D8:98:40:4E:7C:B1:2F:9E:75:6D:F5:CF:5C:AB
 ```
 
-## Contribution
+## Contribuciones
 
-Contributions are welcome at every level: bug reports, code, translations, UI improvements, documentation, and more. See our [contribution guide](.github/CONTRIBUTING.md) for details.
+Las contribuciones son bienvenidas en todos los niveles: informes de errores, código, traducciones, mejoras de UI, documentación y más. Consulta nuestra [guía de contribución](.github/CONTRIBUTING.md) para más información.
 
 <a href="https://hosted.weblate.org/engage/newpipe/">
 <img src="https://hosted.weblate.org/widgets/newpipe/-/287x66-grey.png" alt="Translation status" />
 </a>
 
-## Donate
+## Donaciones
 
-If you enjoy NewPipe, consider donating via Liberapay. Donations help keep the project independent and sustainable.
+Si te gusta NewPipe, considera donar a través de Liberapay. Las donaciones ayudan a que el proyecto siga siendo independiente y sostenible.
 
 <table>
   <tr>
@@ -131,12 +131,12 @@ If you enjoy NewPipe, consider donating via Liberapay. Donations help keep the p
   </tr>
 </table>
 
-## Privacy policy
+## Política de privacidad
 
-NewPipe strives to protect your privacy and does not collect data without your consent. Details about crash reports and other optional data transmission are available in the project privacy policy: [https://newpipe.net/legal/privacy/](https://newpipe.net/legal/privacy/).
+NewPipe protege tu privacidad y no recopila datos sin tu consentimiento. Detalles sobre informes de fallos y otros envíos opcionales están disponibles en la política de privacidad: [https://newpipe.net/legal/privacy/](https://newpipe.net/legal/privacy/).
 
-## License
+## Licencia
 
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-NewPipe is Free Software. You may use, study, share, and improve it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/gpl.html), version 3 or later.
+NewPipe es software libre. Puedes usarlo, estudiarlo, compartirlo y mejorarlo bajo los términos de la [Licencia Pública General GNU](https://www.gnu.org/licenses/gpl.html), versión 3 o posterior.

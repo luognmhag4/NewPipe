@@ -21,7 +21,7 @@ dependencyResolutionManagement {
 }
 include (":app")
 
-// Usa una copia local de NewPipe Extractor descomentando las líneas de abajo.
+// Usa una copia  local de NewPipe Extractor descomentando las líneas de abajo.
 // Se asume que NewPipe y NewPipe Extractor tienen el mismo directorio padre.
 // Si no es así, cambia la ruta en includeBuild().
 

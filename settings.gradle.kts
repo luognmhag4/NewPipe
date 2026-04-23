@@ -21,9 +21,9 @@ dependencyResolutionManagement {
 }
 include (":app")
 
-// Use a local copy of NewPipe Extractor by uncommenting the lines below.
-// We assume, that NewPipe and NewPipe Extractor have the same parent directory.
-// If this is not the case, please change the path in includeBuild().
+// Usa una copia local de NewPipe Extractor descomentando las líneas de abajo.
+// Se asume que NewPipe y NewPipe Extractor tienen el mismo directorio padre.
+// Si no es así, cambia la ruta en includeBuild().
 
 //includeBuild("../NewPipeExtractor") {
 //    dependencySubstitution {
